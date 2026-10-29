@@ -19,6 +19,12 @@ export function SiteHeader() {
 
   useEffect(() => {
     const controlNavbar = () => {
+      // FIX 1: If the mobile menu is open, force the navbar to stay visible
+      if (isMobileMenuOpen) {
+        setIsVisible(true);
+        return;
+      }
+
       const currentScrollY = window.scrollY;
       
       if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
@@ -32,7 +38,25 @@ export function SiteHeader() {
 
     window.addEventListener("scroll", controlNavbar);
     return () => window.removeEventListener("scroll", controlNavbar);
-  }, []);
+  }, [isMobileMenuOpen]); // Added dependency so it knows when menu opens/closes
+
+  // FIX 2: Lock background scrolling when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMobileMenuOpen]);
+
+  // FIX 3: Auto-close menu on route change
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setIsMegaMenuOpen(false);
+  }, [pathname]);
 
   const mainLinks = navItems.slice(0, 5);
   const closeMenus = () => {
@@ -154,13 +178,13 @@ export function SiteHeader() {
         </div>
       </header>
 
-      {/* MOBILE MENU OVERLAY */}
+      {/* MOBILE MENU OVERLAY - Added overflow-y-auto and pb-24 for safe scrolling */}
       <div
         className={`fixed inset-0 top-[60px] z-40 bg-white transition-all duration-300 lg:hidden ${
           isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
-        <div className="flex flex-col p-4">
+        <div className="flex h-full flex-col overflow-y-auto p-4 pb-24">
           {navItems.map((item) => (
             <Link
               key={item.label}
@@ -179,4 +203,3 @@ export function SiteHeader() {
     </>
   );
 }
-

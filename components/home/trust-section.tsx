@@ -37,7 +37,7 @@ export function TrustSection() {
             />
 
             {/* Caption chip - reduced padding and bottom/left spacing */}
-            <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/20 bg-white/10 p-4 text-white backdrop-blur-xl sm:right-auto sm:max-w-xs lg:bottom-6 lg:left-6">
+           <div className="absolute bottom-32 left-6 right-6 rounded-2xl border border-white/20 bg-white/10 p-4 text-white backdrop-blur-xl sm:right-auto sm:max-w-xs lg:bottom-32 lg:left-10">
               <p className="text-sm font-semibold leading-snug">
                 Built so your team can run it without us.
               </p>
