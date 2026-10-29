@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f5f1;
+  --foreground: #171717;
+  --brand-charcoal: #171717;
+  --brand-secondary: #2a2f2e;
+  --brand-gold: #c6a567;
+  --brand-ivory: #f7f5f1;
+  --brand-muted: #5d5d5d;
+  --brand-border: #e6e0d5;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-charcoal: var(--brand-charcoal);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-ivory: var(--brand-ivory);
+  --color-brand-muted: var(--brand-muted);
+  --color-brand-border: var(--brand-border);
+  --font-sans: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 460px;
+}
+
+.hero-visual-glow {
+  position: absolute;
+  inset: 8% 10% 12% 8%;
+  border-radius: 36px;
+  background: radial-gradient(circle at 30% 30%, rgba(198, 165, 103, 0.28), rgba(198, 165, 103, 0) 38%),
+    linear-gradient(135deg, rgba(23, 23, 23, 0.08), rgba(23, 23, 23, 0));
+  filter: blur(8px);
+}
+
+::selection {
+  background: rgba(198, 165, 103, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
