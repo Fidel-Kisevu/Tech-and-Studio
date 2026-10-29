@@ -182,7 +182,7 @@ export function ProductsSection() {
               Everything we build for your mission.
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-brand-muted">
-              {products.length} products and services. Hover to learn more, or click any card to explore the full details.
+              Products and services. Hover to learn more, or click any card to explore the full details.
             </p>
           </div>
 
@@ -206,26 +206,7 @@ export function ProductsSection() {
           </div>
         </div>
 
-        <div role="tablist" className="mt-10 flex flex-wrap gap-2">
-          {categories.map((c) => {
-            const selected = c === category;
-            return (
-              <button
-                key={c}
-                role="tab"
-                aria-selected={selected}
-                onClick={() => chooseCategory(c)}
-                className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
-                  selected
-                    ? "border-brand-charcoal bg-brand-charcoal text-brand-ivory"
-                    : "border-brand-border bg-white text-brand-muted hover:border-brand-charcoal/30 hover:text-brand-charcoal"
-                }`}
-              >
-                {c}
-              </button>
-            );
-          })}
-        </div>
+    
       </div>
 
       {/* Rail */}
