@@ -9,7 +9,7 @@ export default function ProductsPage() {
       <PageHero
         eyebrow="Products"
         title="Product directions developed around meaningful user needs."
-        description="Avenor Digital is building a thoughtful product portfolio with a clear bias toward practical tools for churches, ministries and mission-driven organizations."
+        description="Aventek is building a thoughtful product portfolio with a clear bias toward practical tools for churches, ministries and mission-driven organizations."
         actions={
           <>
             <Link href="/contact" className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-charcoal px-5 py-3 text-sm font-medium text-brand-ivory hover:bg-brand-secondary">Request a demo</Link>

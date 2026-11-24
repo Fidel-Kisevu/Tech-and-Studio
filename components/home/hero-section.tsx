@@ -1,95 +1,110 @@
+
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowDownRight, ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, ArrowDownRight, Sparkles } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section className="relative isolate flex min-h-[min(900px,100svh)] w-full items-center overflow-hidden bg-brand-charcoal text-white">
-      
-      {/* Background SVG */}
+    <section className="relative isolate flex min-h-[min(850px,100svh)] w-full items-center overflow-hidden bg-brand-charcoal text-white">
+
+      {/* Background photography */}
+      <div className="absolute inset-0 -z-20">
+        <Image
+          src="/images/home.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+      </div>
+
+      {/* Dark overlays for readability */}
+      <div className="absolute inset-0 -z-10 bg-brand-charcoal/65" />
+
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-brand-charcoal/95 via-brand-charcoal/80 to-brand-charcoal/25" />
+
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-brand-charcoal/70 via-transparent to-brand-charcoal/20" />
+
+      {/* Subtle brand accent */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/hero-bg.svg')" }}
+        className="pointer-events-none absolute right-[12%] top-1/3 -z-10 h-72 w-72 rounded-full bg-brand-gold/10 blur-[120px]"
       />
 
-      {/* Subtle contrast layers to ensure text is readable */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 z-0 bg-gradient-to-r from-brand-charcoal via-brand-charcoal/85 to-brand-charcoal/35"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 z-0 bg-gradient-to-t from-brand-charcoal/80 via-transparent to-brand-charcoal/20"
-      />
+      {/* Content */}
+      <div className="mx-auto w-full max-w-7xl px-5 py-32 sm:px-8 sm:py-36 lg:px-12 lg:py-40">
 
-      {/* Ambient accent glow (using your brand gold) */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-40 top-1/4 z-0 h-96 w-96 rounded-full bg-brand-gold/[0.08] blur-[120px]"
-      />
-
-      {/* Main content */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 py-28 sm:px-8 sm:py-32 lg:px-12 lg:py-36">
         <div className="max-w-5xl">
-          
-          {/* Eyebrow Tag */}
-          <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2 backdrop-blur-sm">
-            <Sparkles size={15} className="shrink-0 text-brand-gold" aria-hidden="true" />
-            <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/80 sm:text-xs">
-              Strategy. Design. Digital.
+
+          {/* Eyebrow */}
+          <div className="mb-8 inline-flex items-center gap-3 border rounded border-white/15 bg-white/[0.08] px-5 py-3 backdrop-blur-md">
+
+            <span className="text-[5px] font-semibold uppercase tracking-[0.2em] text-white/90 sm:text-xs">
+              Digital solutions for your ministry
             </span>
           </div>
 
-          {/* Massive Headline */}
-          <h1 className="max-w-5xl text-[clamp(2.5rem,6vw,5rem)] font-extrabold leading-[1.05] tracking-[-0.04em] text-white">
-            {/* Top Line */}
-            <span className="block text-[clamp(3rem,7.6vw,7rem)] leading-[0.98] tracking-[-0.065em]">
-              The Digital Studio
-            </span>
-            
-            {/* Bottom Line */}
-            <span className="mt-3 block text-[clamp(1.5rem,3.5vw,3rem)] text-white/90">
-              for mission-driven <span className="text-brand-gold">Churches.</span>
-            </span>
-          </h1>
+        {/* Headline */}
+        <h1 className="max-w-5xl text-[clamp(2.3rem,6.2vw,5.8rem)] font-extrabold leading-[1.02] tracking-[-0.055em]">
+          The Digital Solutions
+        </h1>
+
+        <span className="mt-2 block max-w-5xl text-[clamp(0.8rem,1.8vw,1rem)] leading-[1.15] tracking-[-0.035em]">
+          for Ministers, Churches, and Communities.
+        </span>
+
+
          
 
-          {/* Supporting Copy */}
-          <p className="mt-8 max-w-xl text-base leading-8 text-white/70 sm:mt-10 sm:text-lg sm:leading-9">
-            We build thoughtful digital experiences, practical systems, and
-            sustainable growth strategies—so your team can focus on what
-            matters most: people and ministry.
+          {/* Supporting copy */}
+          <p className="mt-8 max-w-xl text-base leading-8 text-white/75 sm:mt-10 sm:text-lg sm:leading-9">
+            Your complete digital ecosystem—websites, apps, and publishing
+            tools designed to help you share your teachings and grow your
+            community.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="mt-9 flex flex-col gap-3 sm:mt-11 sm:flex-row sm:items-center sm:gap-4">
+          {/* Actions */}
+          <div className="mt-9 flex flex-col gap-4 sm:mt-11 sm:flex-row sm:items-center">
+
             <Link
               href="/contact"
-              className="group inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-brand-gold px-7 py-4 text-sm font-semibold text-brand-charcoal transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-charcoal"
+              className="group inline-flex min-h-14 items-center justify-center gap-4 bg-brand-gold px-8 py-4 text-sm font-bold text-brand-charcoal transition-all duration-300 hover:bg-white"
             >
-              Book a Discovery Call
-              <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              Let's Build Together
+
+              <ArrowRight
+                size={18}
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              />
             </Link>
 
             <Link
               href="/services"
-              className="group inline-flex min-h-14 items-center justify-center gap-2 rounded-full border border-white/20 px-7 py-4 text-sm font-semibold text-white/90 transition-colors hover:border-white/50 hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-charcoal"
+              className="group inline-flex min-h-14 items-center justify-center gap-3 border border-white/30 bg-white/[0.05] px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:border-brand-gold hover:bg-white/10"
             >
-              Explore Services
-              <ArrowDownRight size={17} className="transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5" aria-hidden="true" />
+              Explore Our Services
+
+              <ArrowDownRight
+                size={18}
+                className="text-brand-gold transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"
+              />
             </Link>
+
           </div>
 
-          {/* Brand positioning line */}
-          <div className="mt-14 flex items-center gap-4 sm:mt-16">
-            <span aria-hidden="true" className="h-px w-10 bg-brand-gold" />
-            <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-white/45 sm:text-xs">
-              Thoughtful technology. Meaningful impact.
-            </p>
-          </div>
-          
+
         </div>
       </div>
+
+      {/* Bottom scroll indicator */}
+      <div className="absolute bottom-8 right-8 hidden items-center gap-3 text-white/50 lg:flex">
+        <span className="text-[9px] font-semibold uppercase tracking-[0.2em]">
+          Scroll to explore
+        </span>
+        <span className="h-10 w-px bg-brand-gold/60" />
+      </div>
+
     </section>
   );
 }

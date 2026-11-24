@@ -5,7 +5,7 @@ export default function TermsPage() {
     <>
       <PageHero
         eyebrow="Terms of service"
-        title="Terms for working with Avenor Digital."
+        title="Terms for working with Aventek."
         description="These terms provide a simple overview of how project work is scoped, communicated and delivered. Final agreements are subject to a written proposal or signed project contract."
       />
 

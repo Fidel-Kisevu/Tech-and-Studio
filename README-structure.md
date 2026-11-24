@@ -1,4 +1,4 @@
-# Avenor Digital Project Structure Guide
+# Aventek — Digital Solutions Project Structure Guide
 
 This document is a quick map of the project so another developer can understand the codebase, what each folder is for, and where to make the most common updates.
 
@@ -6,7 +6,7 @@ This document is a quick map of the project so another developer can understand 
 
 ## 1) Project overview
 
-This is a Next.js 16 project using the App Router and TypeScript. The site is built for Avenor Digital, a digital studio focused on churches, ministries, community organizations, and purpose-driven institutions.
+This is a Next.js 16 project using the App Router and TypeScript. The site is built for Aventek — Digital Solutions, a digital studio focused on churches, ministries, community organizations, and purpose-driven institutions.
 
 The application is organized around a few important principles:
 
@@ -261,3 +261,49 @@ If you want to understand the project quickly, start with:
 5. `README.md`
 
 That gives you the clearest view of the application’s logic, layout system, and content structure.
+
+
+About Aventek
+Aventek — Digital Solutions is a technology company focused on software development, artificial intelligence solutions, mobile applications and digital services.
+
+Who we are
+Aventek is a global technology brand. We design, build, operate and commercialize digital products for businesses and the people who use them, wherever they are.
+
+Our work spans mobile and web, with a particular focus on iOS, Android and modern web platforms. We take products from a first idea through development and launch, then keep them running and improving over time.
+
+What we do
+Software development. Custom software products, built and maintained for the long term.
+Artificial intelligence solutions. Assistants, automation and intelligent features built into real products.
+Mobile applications. Native and cross-platform apps for iOS and Android.
+Digital services. Web platforms, integrations and the services that keep products running.
+How we work
+We treat a product as more than a single release. We develop it, operate it in production, and grow it into something durable and commercial. That means careful engineering, attention to detail, and a long-term view of quality and support.
+
+Where we work
+Everywhere our users are. We build for a global audience and ship through the App Store, Google Play and the web.
+
+We develop, operate and commercialize software products and digital services across mobile, web and artificial intelligence.
+
+Mobile applications
+Native and cross-platform apps for iOS and Android, from concept and design through to launch on the App Store and Google Play, and ongoing updates.
+
+Artificial intelligence solutions
+Assistants, automation and intelligent features that bring AI into products people use every day.
+
+Web platforms
+Fast, scalable web apps, dashboards and customer-facing platforms for the modern web.
+
+Software development
+Custom software products, developed, operated and maintained for the long term.
+
+Digital services
+Ongoing digital services, integrations and support that keep products running and growing after launch.
+
+IT solutions
+Infrastructure, integrations and the technical foundations behind reliable, secure products.
+
+
+
+
+
+

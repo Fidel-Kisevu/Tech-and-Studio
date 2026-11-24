@@ -9,7 +9,7 @@ export default function InsightsPage() {
       <PageHero
         eyebrow="Insights & resources"
         title="Thoughtful perspectives for digital growth and organizational clarity."
-        description="Avenor Digital is preparing a growing library of practical resources on church digital transformation, digital publishing, operational systems and AI-enabled workflows."
+        description="Aventek is preparing a growing library of practical resources on church digital transformation, digital publishing, operational systems and AI-enabled workflows."
       />
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">

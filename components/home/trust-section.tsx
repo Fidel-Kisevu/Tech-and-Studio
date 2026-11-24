@@ -2,7 +2,7 @@ import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { trustPillars } from "@/lib/site-data";
 
-const TRUST_IMAGE: string | null = null;
+const TRUST_IMAGE: string | null = "/images/trust.jpeg";
 
 export function TrustSection() {
   return (
@@ -18,7 +18,7 @@ export function TrustSection() {
             {TRUST_IMAGE ? (
               <Image
                 src={TRUST_IMAGE}
-                alt="The Avenor Digital team working with a client"
+                alt="The Aventek team working with a client"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover object-center transition-transform duration-[1400ms] ease-out group-hover:scale-105"
@@ -37,7 +37,7 @@ export function TrustSection() {
             />
 
             {/* Caption chip - reduced padding and bottom/left spacing */}
-           <div className="absolute bottom-32 left-6 right-6 rounded-2xl border border-white/20 bg-white/10 p-4 text-white backdrop-blur-xl sm:right-auto sm:max-w-xs lg:bottom-32 lg:left-10">
+           <div className="absolute bottom-32 left-6 right-6 rounded-2xl p-4 text-white backdrop-blur-xl sm:right-auto sm:max-w-xs lg:bottom-32 lg:left-10">
               <p className="text-sm font-semibold leading-snug">
                 Built so your team can run it without us.
               </p>

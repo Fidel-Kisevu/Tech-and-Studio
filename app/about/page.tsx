@@ -6,7 +6,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="A founder-led studio for digital systems, creative work and practical growth."
-        description="Avenor Digital was created to help churches, ministries and mission-driven organizations build stronger digital foundations without losing sight of their mission or operational realities."
+        description="Aventek was created to help churches, ministries and mission-driven organizations build stronger digital foundations without losing sight of their mission or operational realities."
       />
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">

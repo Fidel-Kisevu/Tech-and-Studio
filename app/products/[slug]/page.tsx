@@ -137,7 +137,7 @@ async function ProductContent({ params }: { params: Promise<{ slug: string }> })
       <section className="bg-brand-ivory py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-semibold tracking-[-0.03em] text-brand-charcoal sm:text-4xl">
-            More from Avenor Digital
+            More from Aventek
           </h2>
 
           <div className="mt-10 grid gap-5 sm:grid-cols-3">

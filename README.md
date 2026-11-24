@@ -1,12 +1,12 @@
-# Avenor Digital
+# Aventek — Digital Solutions
 
-Avenor Digital is a premium digital studio website and product foundation for churches, ministries, community organizations and purpose-driven institutions. The project uses Next.js, App Router and Tailwind CSS to present a credible brand, service catalogue, portfolio, product directions and project inquiry flow.
+Aventek is a premium digital studio and product foundation for churches, ministries, community organizations and purpose-driven institutions. The project uses Next.js, App Router and Tailwind CSS to present a credible brand, service catalogue, portfolio, product directions and project inquiry flow.
 
 ## Project purpose
 
 This application demonstrates:
 
-- A distinctive brand and visual identity for Avenor Digital
+- A distinctive brand and visual identity for Aventek — Digital Solutions
 - Service detail pages for website design, software systems, creative support and operational consulting
 - Product pages for the studio’s initial offerings, including Minister Digital Platform, ChurchOS and Bereans Space
 - A portfolio with realistic prototype and concept case studies

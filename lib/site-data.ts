@@ -37,10 +37,15 @@ export type PortfolioItem = {
   kind: "Website" | "Software & Dashboard" | "Church Technology" | "Creative & Media" | "Data & AI";
   status: "Completed" | "Prototype" | "In development" | "In Development" | "Concept" | "Live Demo";
   summary: string;
+  audience?: string;
   problem: string;
-  approach: string;
-  stack: string[];
+  approach?: string;
+  features?: string[];
+  stack?: string[];
+  tech?: string[];
   outcome?: string;
+  demoUrl?: string;
+  docsUrl?: string;
 };
 
 export type TechnologyCategory = {
@@ -58,15 +63,15 @@ export type InsightArticle = {
 };
 
 export const company = {
-  name: "Avenor Digital",
+  name: "Aventek",
   tagline: "Technology that brings people and purpose together.",
   alternativeTagline: "Building better digital experiences for organizations that matter.",
   description:
-    "Avenor Digital helps churches, ministries, community organizations and mission-driven institutions build clear digital experiences, practical systems and reliable operations.",
-  email: "hello@avenordigital.com",
+    "Aventek helps churches, ministries, community organizations and mission-driven institutions build clear digital experiences, practical systems and reliable operations.",
+  email: "hello@aventek.com",
   phone: "+254 700 000 000",
   location: "Nairobi, Kenya",
-  website: "https://avenordigital.com",
+  website: "https://aventek.com",
   socialLinks: {
     linkedin: "https://www.linkedin.com",
     x: "https://x.com",
@@ -425,10 +430,18 @@ export const portfolioItems: PortfolioItem[] = [
     kind: "Data & AI",
     status: "Prototype",
     summary: "A content tooling concept using AI-assisted drafting, document review and publication steps to cut repetitive work for teams.",
+    audience: "Publishing teams, content creators and ministry leaders.",
     problem: "Publishing teams and ministries were spending too much time drafting repetitive content and reformatting materials across channels.",
-    approach: "We mapped content flows and created a lightweight workflow that supports initial drafting, QA and publishing handoff for approved content.",
-    stack: ["AI integrations", "Automation design", "Workflow review", "Content QA"],
-    outcome: "A prototype showing how AI can support but not replace editorial judgment and process quality.",
+    features: [
+      "AI-assisted content drafting",
+      "Automated document formatting",
+      "Integration with publishing workflows",
+      "Content review and approval steps",
+      "Performance tracking and analytics",
+    ],
+    tech: ["AI writing models", "Document automation", "API integrations", "Workflow management"],
+    demoUrl: "/products/ai-content-automation",
+    docsUrl: "/contact",
   },
 ];
 

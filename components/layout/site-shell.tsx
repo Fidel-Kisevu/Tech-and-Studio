@@ -1,10 +1,12 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Search, ArrowRight } from "lucide-react";
 import { navItems, serviceItems, productItems } from "@/lib/site-data"; 
+import mainIcon from '@/public/images/mainicon1.png';
 
 // ==========================================
 // 1. SITE HEADER
@@ -75,13 +77,15 @@ export function SiteHeader() {
           
           {/* LEFT: Logo & Main Links */}
           <div className="flex items-center gap-8">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-6 w-6 items-center justify-center bg-brand-charcoal text-white text-xs font-bold">
-                A
-              </div>
-              <span className="text-lg font-semibold tracking-tight text-brand-charcoal">
-                Avenor
-              </span>
+            <Link href="/" aria-label="Aventek home" className="flex items-center">
+              <Image
+                src={mainIcon}
+                alt="Aventek"
+                width={150}
+                height={48}
+                priority
+                className="h-[42px] w-auto object-contain object-left"
+              />
             </Link>
 
             <nav className="hidden lg:flex items-center gap-6 h-full">
@@ -92,7 +96,7 @@ export function SiteHeader() {
                     key={item.label}
                     href={item.href}
                     onClick={closeMenus}
-                    className={`group relative flex h-[60px] items-center text-[13px] font-medium transition-colors hover:text-brand-charcoal ${
+                    className={`group relative flex h-[60px] items-center text-[13px] font-bold transition-colors hover:text-brand-charcoal ${
                       isActive ? "font-semibold text-brand-charcoal" : "text-brand-muted"
                     }`}
                   >
@@ -105,7 +109,7 @@ export function SiteHeader() {
             </nav>
           </div>
 
-          {/* RIGHT: All Avenor Dropdown, Search, CTA */}
+          {/* RIGHT: All Aventek Dropdown, Search, CTA */}
           <div className="hidden lg:flex items-center gap-6">
             <div 
               className="relative h-[60px] flex items-center"
@@ -113,7 +117,7 @@ export function SiteHeader() {
               onMouseLeave={() => setIsMegaMenuOpen(false)}
             >
               <button className="flex items-center gap-1 text-[13px] font-medium text-brand-charcoal hover:underline decoration-2 underline-offset-4">
-                All Avenor
+                All Aventek
                 <ChevronDown size={14} className={`transition-transform duration-200 ${isMegaMenuOpen ? "rotate-180" : ""}`} />
               </button>
 
