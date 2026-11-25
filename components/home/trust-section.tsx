@@ -33,15 +33,15 @@ export function TrustSection() {
 
             <div
               aria-hidden
-              className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/60 to-transparent"
+              className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-white/60 to-transparent"
             />
 
             {/* Caption chip - reduced padding and bottom/left spacing */}
-           <div className="absolute bottom-32 left-6 right-6 rounded-2xl p-4 text-white backdrop-blur-xl sm:right-auto sm:max-w-xs lg:bottom-32 lg:left-10">
+           <div className="absolute bottom-32 left-6 right-6 rounded-2xl p-4 text-brand-navy bg-white sm:right-auto sm:max-w-xs lg:bottom-32 lg:left-10">
               <p className="text-sm font-semibold leading-snug">
                 Built so your team can run it without us.
               </p>
-              <p className="mt-0.5 text-xs text-white/75">
+              <p className="mt-0.5 text-xs text-brand-pink">
                 Clear handover, simple tools, real training.
               </p>
             </div>
@@ -64,19 +64,19 @@ export function TrustSection() {
 
             <div className="relative">
               {/* Reduced headline margin bottom */}
-              <h2 className="text-4xl font-bold leading-[1.05] tracking-[-0.04em] text-brand-charcoal sm:text-5xl lg:text-6xl">
+              <h2 className="text-4xl font-bold leading-[1.05] tracking-[-0.04em] text-brand-pink sm:text-5xl lg:text-6xl">
                 Our expertise
               </h2>
 
               {/* Reduced top margin and padding for the divider */}
               <div className="mt-5 border-t border-brand-border pt-4">
-                <p className="text-xs font-medium text-brand-muted">
+                <p className="text-xs font-medium text-brand-navy sm:text-sm">
                   Digital strategy and systems for mission-driven teams
                 </p>
               </div>
 
               {/* Reduced paragraph spacing */}
-              <p className="mt-4 max-w-xl text-base leading-relaxed text-brand-charcoal">
+              <p className="mt-4 max-w-xl text-base leading-relaxed text-brand-navy sm:text-lg sm:leading-relaxed">
                 We combine strategy, design, software thinking and creative execution so
                 your projects are practical, maintainable and easier for your team to
                 adopt.
@@ -86,7 +86,7 @@ export function TrustSection() {
               <ul className="mt-6 grid gap-x-6 gap-y-3 sm:grid-cols-2">
                 {trustPillars.map((pillar) => (
                   <li key={pillar} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-gold/10 text-brand-gold">
+                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-pink text-white">
                       <CheckCircle2 size={14} aria-hidden />
                     </span>
                     <span className="text-sm leading-6 text-brand-muted">{pillar}</span>

@@ -14,16 +14,15 @@ function ServiceItems() {
       {services.map((service) => (
         <div
           key={service}
-          className="flex shrink-0 items-center gap-7 px-6 sm:gap-10 sm:px-9"
+          className="flex shrink-0 items-center gap-6 px-4 sm:gap-8 sm:px-6"
         >
-          <span className="whitespace-nowrap text-[13px] font-semibold uppercase tracking-[0.13em] text-brand-charcoal transition-colors duration-300 hover:text-brand-gold sm:text-sm">
+          <span className="whitespace-nowrap text-[13px] font-semibold uppercase tracking-[0.13em] text-brand-pink transition-colors duration-300 hover:text-brand-navy sm:text-sm">
             {service}
           </span>
-
-          <span
-            aria-hidden="true"
-            className="h-2 w-2 shrink-0 rotate-45 bg-brand-gold"
-          />
+          {/* Straight vertical separator line */}
+          <span className="text-brand-navy font-light" aria-hidden="true">
+            |
+          </span>
         </div>
       ))}
     </>
@@ -34,7 +33,7 @@ export function ServicesMarquee() {
   return (
     <section
       aria-label="Aventek services"
-      className="relative overflow-hidden border-y border-brand-border/60 bg-white py-6 sm:py-8"
+      className="relative overflow-hidden bg-white py-6 sm:py-8"
     >
       <style>{`
         @keyframes aventek-marquee {
@@ -65,10 +64,7 @@ export function ServicesMarquee() {
             <ServiceItems />
           </div>
 
-          <div
-            className="flex shrink-0 items-center"
-            aria-hidden="true"
-          >
+          <div className="flex shrink-0 items-center" aria-hidden="true">
             <ServiceItems />
           </div>
         </div>

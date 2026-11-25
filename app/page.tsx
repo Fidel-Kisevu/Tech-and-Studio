@@ -12,8 +12,9 @@ export default function HomePage() {
       <HeroSection />
        <ServicesMarquee />
       <TrustSection />
-      <SelectedWorkSection />
       <ServicesSection />
+      <SelectedWorkSection />
+      
       <ProductsSection />
       <ClosingCta />
     </>

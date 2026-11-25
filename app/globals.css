@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f5f1;
-  --foreground: #171717;
-  --brand-charcoal: #171717;
+  /* Base Theme */
+  --background: #f8f9fa;
+  --foreground: #171A19;
+
+  /* Aventek Logo Colors */
+  --brand-pink: #D2145C;
+  --brand-purple: #5A216D;
+  --brand-navy: #1D3975;
+
+  /* Neutral/UI Colors */
+  --brand-charcoal: #171A19;
   --brand-secondary: #2a2f2e;
-  --brand-gold: #c6a567;
-  --brand-ivory: #f7f5f1;
-  --brand-muted: #5d5d5d;
-  --brand-border: #e6e0d5;
+  --brand-ivory: #f8f9fa;
+  --brand-muted: #64748b;
+  --brand-border: #e2e8f0;
+  --brand-gold: #c6a567; 
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  
+  --color-brand-pink: var(--brand-pink);
+  --color-brand-purple: var(--brand-purple);
+  --color-brand-navy: var(--brand-navy);
+  
   --color-brand-charcoal: var(--brand-charcoal);
   --color-brand-secondary: var(--brand-secondary);
-  --color-brand-gold: var(--brand-gold);
   --color-brand-ivory: var(--brand-ivory);
   --color-brand-muted: var(--brand-muted);
   --color-brand-border: var(--brand-border);
-  --font-sans: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --color-brand-gold: var(--brand-gold);
+
+  /* =========================================
+     FONT DEFINITIONS
+     ========================================= */
+  
+  /* Default Sans Font */
+  --font-sans: var(--font-plus-jakarta), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  /* Roboto (Use with: className="font-roboto") */
+  --font-roboto: var(--font-roboto), sans-serif;
+  
+  /* Bestermind (Use with: className="font-fancy") */
+  /* Note: If Bestermind is a local file you haven't added yet, it will fall back to cursive */
+  --font-fancy: "Bestermind", "Great Vibes", cursive;
+  
   --font-mono: "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
 }
 
@@ -36,35 +63,40 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: "Plus Jakarta Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }
 
-.hero-visual {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 460px;
+/* The Aventek Signature Gradient */
+.bg-brand-gradient {
+  background-image: linear-gradient(135deg, var(--brand-pink) 0%, var(--brand-purple) 50%, var(--brand-navy) 100%);
+}
+
+.text-brand-gradient {
+  background-image: linear-gradient(135deg, var(--brand-pink) 0%, var(--brand-purple) 50%, var(--brand-navy) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .hero-visual-glow {
   position: absolute;
   inset: 8% 10% 12% 8%;
   border-radius: 36px;
-  background: radial-gradient(circle at 30% 30%, rgba(198, 165, 103, 0.28), rgba(198, 165, 103, 0) 38%),
-    linear-gradient(135deg, rgba(23, 23, 23, 0.08), rgba(23, 23, 23, 0));
-  filter: blur(8px);
+  background: radial-gradient(circle at 30% 30%, rgba(210, 20, 92, 0.15), rgba(29, 57, 117, 0) 50%),
+    linear-gradient(135deg, rgba(210, 20, 92, 0.05), rgba(29, 57, 117, 0.05));
+  filter: blur(12px);
 }
 
 ::selection {
-  background: rgba(198, 165, 103, 0.3);
+  background: rgba(210, 20, 92, 0.2);
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
